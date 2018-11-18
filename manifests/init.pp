@@ -20,5 +20,7 @@ class sopel(
     version    => '3.7.0'
   }
 
-  #python::pip { 'sopel' }
+  python::pip { 'sopel':
+    ensure => '6.5.3'
+  }
 }
