@@ -43,4 +43,11 @@ class sopel(
     owner  => 'sopel',
     mode   => '0755',
   }
+  
+  file { '/etc/sopel/sopel.cfg':
+    ensure  => 'file',
+    content => template('sopel/sopel.cfg.erb'),
+    owner   => 'sopel',
+    group   => 'sopel',
+    mode    => '0644',
 }
