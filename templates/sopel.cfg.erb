@@ -3,8 +3,18 @@ nick = <%= @nick %>
 host = <%= @host %>
 use_ssl = <%= @use_ssl %>
 port = <%= @port %>
-owner = <%= @owner %>
-channels = <%= @channels %>
-auth_method = <%= @auth_method %>
-auth_password = <%= @auth_password %>
+<% if @owner -%>
+  owner = <%= @owner %>
+<% end -%>
+
+channels = <%<%= @channels.join(',') %>
+
+<% if @auth_method -%>
+  auth_method = <%= @auth_method %>
+<% end -%>
+
+<% if @auth_password -%>
+  auth_password = <%= @auth_password %>
+<% end -%>
+
 homedir = <%= @homedir %>
