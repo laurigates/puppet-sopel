@@ -4,17 +4,17 @@ host = <%= @host %>
 use_ssl = <%= @use_ssl %>
 port = <%= @port %>
 <% if @owner -%>
-  owner = <%= @owner %>
+owner = <%= @owner %>
 <% end -%>
 
 channels = <%= @channels.join(',') %>
 
 <% if @auth_method -%>
-  auth_method = <%= @auth_method %>
+auth_method = <%= @auth_method %>
 <% end -%>
 
 <% if @auth_password -%>
-  auth_password = <%= @auth_password %>
+auth_password = <%= @auth_password %>
 <% end -%>
 
 homedir = <%= @homedir %>
