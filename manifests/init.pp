@@ -39,5 +39,8 @@ class sopel(
   
   file { '/etc/sopel':
     ensure => 'directory',
+    group  => 'sopel',
+    owner  => 'sopel',
+    mode   => '0755',
   }
 }
