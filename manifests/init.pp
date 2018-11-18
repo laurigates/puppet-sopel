@@ -15,6 +15,8 @@ class sopel(
   $logdir = '/var/log/sopel',
   $pid_dir = '/run/sopel',
   $homedir = '/var/lib/sopel',
+  $auth_method = '',
+  $auth_password = ''
 ) {
   package { 'python-enchant':
     ensure => 'installed',
@@ -32,7 +34,7 @@ class sopel(
     ensure  => 'present',
     comment => 'User as which the sopel IRC client will run',
     expiry  => 'absent',
-    home    => '/etc/sopel',
+    home    => $homedir,
     shell   => '/usr/sbin/nologin',
     system  => true,
   }
