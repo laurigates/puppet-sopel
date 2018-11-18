@@ -16,11 +16,15 @@ class sopel(
   $pid_dir = "/run/sopel",
   $homedir = "/var/lib/sopel",
 ) {
+  package { 'python-enchant':
+    ensure => 'installed',
+  }
+
   class { 'python':
-    version    => '3.7.0'
+    version    => '3.7.0',
   }
 
   python::pip { 'sopel':
-    ensure => '6.5.3'
+    ensure => '6.5.3',
   }
 }
