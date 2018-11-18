@@ -16,7 +16,7 @@ class sopel(
   $pid_dir = '/run/sopel',
   $homedir = '/var/lib/sopel',
   $auth_method = '',
-  $auth_password = ''
+  $auth_password = '',
 ) {
   package { 'python-enchant':
     ensure => 'installed',
@@ -52,4 +52,5 @@ class sopel(
     owner   => 'sopel',
     group   => 'sopel',
     mode    => '0644',
+  }
 }
