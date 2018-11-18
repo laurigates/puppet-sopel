@@ -17,12 +17,8 @@ class sopel(
   $homedir = "/var/lib/sopel",
 ) {
   class { 'python':
-    version    => '3.7.0',
-    dev        => false,
-    virtualenv => true,
+    version    => '3.7.0'
   }
 
-  python::pip { 'sopel':
-    virtualenv => '/opt/sopel',
-  }
+  python::pip { 'sopel' }
 }
