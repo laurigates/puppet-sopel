@@ -59,5 +59,20 @@ class sopel(
     owner   => 'sopel',
     group   => 'sopel',
     mode    => '0644',
+    notify  => Service['sopel'],
+  }
+  
+  file { '/etc/systemd/system/sopel.service':
+    ensure  => 'file',
+    content => file('sopel/sopel.service'),
+    owner   => 'root',
+    group   => 'root',
+    mode    => '0644',
+    notify  => Service['sopel'],
+  }
+  
+  service { 'sopel':
+    ensure => 'running',
+    enable => true,
   }
 }
