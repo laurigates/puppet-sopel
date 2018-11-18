@@ -6,15 +6,15 @@
 #   include sopel
 class sopel(
   $channels = [],
-  $nick = "Sopel",
-  $host = "irc.freenode.net",
-  $port = "6697",
+  $nick = 'Sopel',
+  $host = 'irc.freenode.net',
+  $port = '6697',
   $use_ssl = true,
   $verify_ssl = true,
-  $owner = "",
-  $logdir = "/var/log/sopel",
-  $pid_dir = "/run/sopel",
-  $homedir = "/var/lib/sopel",
+  $owner = '',
+  $logdir = '/var/log/sopel',
+  $pid_dir = '/run/sopel',
+  $homedir = '/var/lib/sopel',
 ) {
   package { 'python-enchant':
     ensure => 'installed',
@@ -26,5 +26,18 @@ class sopel(
 
   python::pip { 'sopel':
     ensure => '6.5.3',
+  }
+  
+  user { 'sopel':
+    ensure  => 'present',
+    comment => 'User as which the sopel IRC client will run',
+    expiry  => 'absent',
+    home    => '/etc/sopel',
+    shell   => '/sbin/nologin',
+    system  => true,
+  }
+  
+  file { '/etc/sopel':
+    ensure => 'directory',
   }
 }
