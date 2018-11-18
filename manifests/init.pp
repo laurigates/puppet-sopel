@@ -33,7 +33,7 @@ class sopel(
     comment => 'User as which the sopel IRC client will run',
     expiry  => 'absent',
     home    => '/etc/sopel',
-    shell   => '/sbin/nologin',
+    shell   => '/usr/sbin/nologin',
     system  => true,
   }
   
