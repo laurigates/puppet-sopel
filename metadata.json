@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "author": "Savoir Faire",
   "summary": "",
-  "license": "Apache-2.0",
+  "license": "GPL",
   "source": "",
   "dependencies": [
     {
@@ -20,7 +20,7 @@
     {
       "operatingsystem": "Ubuntu",
       "operatingsystemrelease": [
-        "16.04"
+        "18.04"
       ]
     }
   ],
