@@ -11,12 +11,12 @@ class sopel(
   $port = '6697',
   $use_ssl = true,
   $verify_ssl = true,
-  $owner = '',
+  $owner = undef,
   $logdir = '/var/log/sopel',
   $pid_dir = '/run/sopel',
   $homedir = '/var/lib/sopel',
-  $auth_method = '',
-  $auth_password = '',
+  $auth_method = undef,
+  $auth_password = undef,
 ) {
   package { 'python-enchant':
     ensure => 'installed',
