@@ -1,12 +1,5 @@
-# Not sure why this is needed - it isn't in the examples but the travis deploy fails with:
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#   .bundle/
-#   pkg/
-#   vendor/
-# However, I don't believe you should have to commit those folders to git.
-# For now I'm going to do a git clean before the deploy which will hopefully clear the issue.
-before_deploy: "git clean -fd"
+script:
+  - 'bundle exec rake spec'
 deploy:
   provider: puppetforge
   user: savoirfaire
