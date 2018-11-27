@@ -1,10 +1,10 @@
 {
   "name": "savoirfaire-sopel",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Savoir Faire",
-  "summary": "",
+  "summary": "Install and configure the sopel IRC client",
   "license": "GPL",
-  "source": "",
+  "source": "https://github.com/savoiringfaire/puppet-sopel",
   "dependencies": [
     {
       "name": "voxpupuli/python"
