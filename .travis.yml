@@ -1,0 +1,9 @@
+deploy:
+  provider: puppetforge
+  user: savoirfaire
+  password:
+    secure: "JPeKtQ0vXHJQIVoGDXWnXgEg+UFdMom8cTbEtSXcghxyZyyfCsWXHzFkzNgfbV+P+BrWhg5fm+cyB18SPynDg5xae58Q4F1qyhiKbadoQ/nJfmIRmTqXARkYoDIthOIf35WHFhDf51JK/x5f/aDcGrEmTMzO4zRgmREvhP1mufgGdmKjLX3vtYssIOg+hG3Hf6YzQnOsvEI28FydTJsLkbaLXU6vB/vX5laMx2KFdwT2EplsPRkePNJsGSjAhu8GD6GNc4ZGWXBO0+zM+uegFKz1SN0UwTKcz0ahrqLncv/Rx1NvUn1N8afZMckahir5Odyv9JYR+ODuQKs4yTYQ+ndqTBZjObrEoIcptBGoCLZViZwfgHgnaF1OYr/dBEsgOhB2Ewrp/lnclYozPVevDt5+DMJ3iHGFOa76HRScSszE4szSSC4RA5lE4jV3nc2hl0bKpOz+i+k8mg15+36UwxXhRbMVbff9458BQ7MljlXv2hHOsivJcePhcVmyIVhv/fefnuQJs9/CiRVxa9Oc8Pm9y4u6TdfROgTUi2OERf03urKZdYBPE4v67jmMe8GXPi0GqbLh8Ds3EBeVbPOKaeDlxRfnlQwDKFu62knbxjpOtJi2OJx2+UHqXupviqeGDVxDb1K1i+sbemk1+xqXiAA/ZnptqTRDAr7zBVXIvQo="
+  on:
+    tags: true
+    # all_branches is required to use tags
+    all_branches: true
