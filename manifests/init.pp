@@ -29,7 +29,7 @@ class sopel(
   python::pip { 'sopel':
     ensure => '6.5.3',
   }
-  
+
   user { 'sopel':
     ensure  => 'present',
     comment => 'User as which the sopel IRC client will run',
@@ -38,21 +38,21 @@ class sopel(
     shell   => '/usr/sbin/nologin',
     system  => true,
   }
-  
+
   file { '/etc/sopel':
     ensure => 'directory',
     group  => 'sopel',
     owner  => 'sopel',
     mode   => '0755',
   }
-  
+
   file { $homedir:
     ensure => 'directory',
     group  => 'sopel',
     owner  => 'sopel',
     mode   => '0755',
   }
-  
+
   file { '/etc/sopel/sopel.cfg':
     ensure  => 'file',
     content => template('sopel/sopel.cfg.erb'),
@@ -61,7 +61,7 @@ class sopel(
     mode    => '0644',
     notify  => Service['sopel'],
   }
-  
+
   file { '/etc/systemd/system/sopel.service':
     ensure  => 'file',
     content => file('sopel/sopel.service'),
@@ -70,7 +70,7 @@ class sopel(
     mode    => '0644',
     notify  => Service['sopel'],
   }
-  
+
   service { 'sopel':
     ensure => 'running',
     enable => true,
