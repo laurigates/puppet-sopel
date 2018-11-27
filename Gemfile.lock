@@ -80,8 +80,8 @@ GEM
     puppet-blacksmith (4.1.2)
       rest-client (~> 2.0)
     puppet-lint (2.3.6)
-    puppet-module-posix-default-r2.5 (0.3.12)
-    puppet-module-posix-dev-r2.5 (0.3.12)
+    puppet-module-posix-default-r2.4 (0.3.12)
+    puppet-module-posix-dev-r2.4 (0.3.12)
       codecov (~> 0.1.10)
       gettext-setup (~> 0.26)
       metadata-json-lint (>= 2.0.2, < 3.0.0)
@@ -196,10 +196,10 @@ PLATFORMS
 DEPENDENCIES
   fast_gettext
   puppet
-  puppet-module-posix-default-r2.5
-  puppet-module-posix-dev-r2.5
-  puppet-module-win-default-r2.5
-  puppet-module-win-dev-r2.5
+  puppet-module-posix-default-r2.4
+  puppet-module-posix-dev-r2.4
+  puppet-module-win-default-r2.4
+  puppet-module-win-dev-r2.4
 
 BUNDLED WITH
-   1.16.6
+   1.17.1
