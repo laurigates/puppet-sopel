@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/savoiringfaire/puppet-sopel.svg?branch=master)](https://travis-ci.org/savoiringfaire/puppet-sopel)
 
 # sopel
 #### Table of Contents
