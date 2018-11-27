@@ -1,6 +1,6 @@
 {
   "name": "savoirfaire-sopel",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Savoir Faire",
   "summary": "Install and configure the sopel IRC client",
   "license": "GPL-3.0-or-later",

@@ -1,5 +1,3 @@
-script:
-  - 'bundle exec rake spec'
 deploy:
   provider: puppetforge
   user: savoirfaire
