@@ -4,10 +4,7 @@
 
 1. [Description](#description)
 2. [Setup - The basics of getting started with sopel](#setup)
-    * [What sopel affects](#what-sopel-affects)
-    * [Setup requirements](#setup-requirements)
     * [Beginning with sopel](#beginning-with-sopel)
-3. [Usage - Configuration options and additional functionality](#usage)
 4. [Limitations - OS compatibility, etc.](#limitations)
 5. [Development - Guide for contributing to the module](#development)
 
