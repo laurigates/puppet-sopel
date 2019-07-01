@@ -5,29 +5,29 @@
 # @example
 #   include sopel
 class sopel(
-  $channels = [],
-  $nick = 'Sopel',
-  $host = 'irc.freenode.net',
-  $port = '6697',
-  $use_ssl = true,
-  $verify_ssl = true,
-  $owner = undef,
-  $logdir = '/var/log/sopel',
-  $pid_dir = '/run/sopel',
-  $homedir = '/var/lib/sopel',
-  $auth_method = undef,
-  $auth_password = undef,
+  $version,
+  $channels,
+  $nick,
+  $host,
+  $port,
+  $use_ssl,
+  $verify_ssl,
+  $owner,
+  $logdir,
+  $pid_dir,
+  $homedir,
+  $auth_method,
+  $auth_password,
 ) {
-  package { 'python-enchant':
-    ensure => 'installed',
-  }
+  include ::python
 
-  class { 'python':
-    version    => '3.7.0',
+  package { 'python-enchant':
+    ensure => installed,
   }
 
   python::pip { 'sopel':
-    ensure => '6.5.3',
+    ensure  => $version,
+    require => Package['python-enchant'],
   }
 
   user { 'sopel':

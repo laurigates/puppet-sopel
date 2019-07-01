@@ -1,0 +1,15 @@
+---
+sopel::version: 6.5.3
+sopel::channels: []
+sopel::nick: Sopel
+sopel::host: irc.freenode.net
+sopel::port: 6697
+sopel::use_ssl: true
+sopel::verify_ssl: true
+sopel::owner: null
+sopel::logdir: /var/log/sopel
+sopel::pid_dir: /run/sopel
+sopel::homedir: /var/lib/sopel
+sopel::auth_method: null
+sopel::auth_password: null
+python::version: python37
