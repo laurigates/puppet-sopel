@@ -18,6 +18,7 @@ class sopel(
   $homedir,
   $auth_method,
   $auth_password,
+  $enable,
 ) {
   include ::python
 

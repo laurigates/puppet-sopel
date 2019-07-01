@@ -18,3 +18,7 @@ auth_password = <%= @auth_password %>
 <% end -%>
 
 homedir = <%= @homedir %>
+
+<% if @enable -%>
+enable = <%= @enable.join(',') %>
+<% end -%>
