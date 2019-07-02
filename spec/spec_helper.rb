@@ -1,3 +1,6 @@
+require 'coveralls'
+Coveralls.wear!
+
 RSpec.configure do |c|
   c.mock_with :rspec
 end
