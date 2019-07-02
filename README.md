@@ -20,9 +20,7 @@ Not all configuration options are included as of the initial release, however pu
 ### Beginning with sopel
 
 ```puppet
-include savoirfaire-sopel
-
-class sopel { 'sopel':
+class { '::sopel':
   channels => ['#channel-1', 'channel-2'],
   nick     => 'Sopel',
   host     => 'irc.freenode.net',
@@ -35,7 +33,7 @@ class sopel { 'sopel':
 
 There is only one class. The current supported parameters are:
 
-### `sopel::sopel`
+### `::sopel`
 #### Parameters
 ##### `channels`
 
@@ -108,6 +106,12 @@ Default: `undef`
 The password the sopel irc bot should use to connect to the host. This is ignored if the auth_method setting above is set to `nil`.
 
 Default: `undef`
+
+##### `enable`
+
+An array of sopel modules to enable.
+
+Default: `[]`
 
 ## Limitations
 
