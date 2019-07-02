@@ -1,4 +1,4 @@
-class sopel { 'sopel':
+class { '::sopel':
   channels => ['#channel-1', 'channel-2'],
   nick     => 'Sopel',
   host     => 'irc.freenode.net',
