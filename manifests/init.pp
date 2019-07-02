@@ -6,6 +6,7 @@
 #   include sopel
 class sopel(
   $version,
+  $python_version,
   $channels,
   $nick,
   $host,
@@ -20,7 +21,9 @@ class sopel(
   $auth_password,
   $enable,
 ) {
-  include ::python
+  class { '::python':
+    version => $python_version,
+  }
 
   package { 'python-enchant':
     ensure => installed,
