@@ -13,4 +13,5 @@ sopel::pid_dir: /run/sopel
 sopel::homedir: /var/lib/sopel
 sopel::auth_method: null
 sopel::auth_password: null
-sopel::enable: []
+sopel::enable: null
+sopel::config_sections: null

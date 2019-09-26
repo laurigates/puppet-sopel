@@ -20,6 +20,7 @@ class sopel(
   $auth_method,
   $auth_password,
   $enable,
+  $config_sections,
 ) {
   class { '::python':
     version => $python_version,
@@ -59,7 +60,19 @@ class sopel(
 
   file { '/etc/sopel/sopel.cfg':
     ensure  => 'file',
-    content => template('sopel/sopel.cfg.erb'),
+    content => epp('sopel/sopel.cfg.epp', {
+      'nick'            => $nick,
+      'host'            => $host,
+      'use_ssl'         => $use_ssl,
+      'port'            => $port,
+      'homedir'         => $homedir,
+      'channels'        => $channels,
+      'owner'           => $owner,
+      'auth_method'     => $auth_method,
+      'auth_password'   => $auth_password,
+      'enable'          => $enable,
+      'config_sections' => $config_sections
+    }),
     owner   => 'sopel',
     group   => 'sopel',
     mode    => '0644',

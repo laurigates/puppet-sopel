@@ -1,0 +1,37 @@
+<%- | String           $nick,
+      String           $host,
+      Boolean          $use_ssl,
+      Integer          $port,
+      String           $homedir,
+      Array            $channels,
+      Optional[String] $owner,
+      Optional[String] $auth_method,
+      Optional[String] $auth_password,
+      Optional[Array]  $enable,
+      Optional[Hash]   $config_sections
+| -%>
+[core]
+nick = <%= $nick %>
+host = <%= $host %>
+use_ssl = <%= $use_ssl %>
+port = <%= $port %>
+homedir = <%= $homedir %>
+channels = <%= $channels.join(',') %>
+<% if $owner  { -%>
+owner = <%= $owner %>
+<% } -%>
+<% if $auth_method { -%>
+auth_method = <%= $auth_method %>
+<% } -%>
+<% if $auth_password { -%>
+auth_password = <%= $auth_password %>
+<% } -%>
+<% if $enable { -%>
+enable = <%= $enable.join(',') %>
+<% } -%>
+<% if $config_sections { -%>
+<% $config_sections.each |$section,$settings| { %>
+[<%= $section %>]
+<% $settings.each |$key,$value| { -%>
+<%= $key %> = <%= $value %>
+<% }}} -%>
